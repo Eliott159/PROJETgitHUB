@@ -1,7 +1,7 @@
 #usr!/bin/env python3
 
 import xlrd
-import maptolib.pyplot as plt
+import matplotlib.pyplot as plt
 
 civilité=[]
 age=[]
@@ -23,6 +23,17 @@ ma=civilité.count("Madame")
 print('nombre femmes : ',ma)
 print('nombre hommes : ',m)
 print('')
+
+labels = 'Monsieur', 'Madame'
+sizes = [m, ma]
+colors = ['lightskyblue', 'lightcoral']
+plt.pie(sizes, labels=labels, colors=colors, 
+        autopct='%1.1f%%', shadow=True, startangle=90)
+plt.axis('equal')
+plt.savefig('graph1.png')
+plt.show()
+
+
 
 
 age=sheet.col_values(5)
@@ -51,6 +62,16 @@ print('nombre juniors : ',junior)
 print('nombre adultes : ',adulte)
 print('')
 
+labels = 'Mini', 'Poussin', 'Junior', 'Adulte'
+sizes = [mini, poussin, junior, adulte]
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
+plt.pie(sizes, labels=labels, colors=colors, 
+        autopct='%1.1f%%', shadow=True, startangle=90)
+plt.axis('equal')
+plt.savefig('graph2.png')
+plt.show()
+
+
 
 
 licence=sheet.col_values(50)
@@ -60,8 +81,19 @@ l=licence.count("Loisir")
 nonr=licence.count('N')
 print('nombre de licence compétition : ',c)
 print('nombre de licence loisir : ',l)
-print('non renseingé : ',nonr)
+print('non renseigé : ',nonr)
 print('')
+
+labels = 'Compétition', 'Loisir', 'Non renseigné'
+sizes = [c, l, nonr]
+colors = ['yellowgreen', 'gold', 'lightskyblue']
+plt.pie(sizes, labels=labels, colors=colors, 
+        autopct='%1.1f%%', shadow=True, startangle=90)
+plt.axis('equal')
+plt.savefig('graph3.png')
+plt.show()
+
+
 
 
 cp=sheet.col_values(11)
@@ -77,4 +109,11 @@ print('nombre de licencié provenant de Poitiers : ',p)
 print('nombre de licencié provenant de Beruges : ',b)
 print('nombre de licencié provenant de Migné Auxances : ',mi)
 
-
+labels = 'Vouneuille sous Biard', 'Montreuil Bonin', 'Poitiers', 'Beruges', 'Migne Auxances'
+sizes = [v, mo, p, b, mi]
+colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'red']
+plt.pie(sizes, labels=labels, colors=colors, 
+        autopct='%1.1f%%', shadow=True, startangle=90)
+plt.axis('equal')
+plt.savefig('graph3.png')
+plt.show()
