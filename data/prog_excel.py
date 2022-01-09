@@ -24,13 +24,13 @@ print('nombre femmes : ',ma)
 print('nombre hommes : ',m)
 print('')
 
-labels = 'Monsieur', 'Madame'
+labels = 'Hommes', 'Femmes'
 sizes = [m, ma]
 colors = ['lightskyblue', 'lightcoral']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graph1.png')
+plt.savefig('graphsexe.png')
 plt.show()
 
 
@@ -68,7 +68,7 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graph2.png')
+plt.savefig('graphage.png')
 plt.show()
 
 
@@ -90,7 +90,7 @@ colors = ['yellowgreen', 'gold', 'lightskyblue']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graph3.png')
+plt.savefig('graphlic.png')
 plt.show()
 
 
@@ -115,5 +115,5 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'red']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graph3.png')
+plt.savefig('graphville.png')
 plt.show()
