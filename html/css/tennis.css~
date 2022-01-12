@@ -1,0 +1,165 @@
+html{
+height: 1000px;
+}
+
+header{
+background-color: #1759AB;
+height:85px;
+padding-top: 2px;
+}
+
+
+#logo{
+margin-left: 3px;
+float: left;
+}
+
+#titre{
+text-align: center;
+}
+
+nav{
+height: 38px;
+border-bottom-style: solid;
+border-bottom-width: 3px;
+border-bottom-color: #1759AB;
+}
+
+.menu {
+	text-align: center;
+	display: flex;
+	padding-right: 500px;
+}
+
+.menu .categorie {
+	flex: 1;
+	position: relative; 
+	height: 36px;
+}
+
+.menu .categorie ul {
+	max-height: 0;
+	overflow: hidden;
+	transition: 0;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: 100%; 						
+}
+
+.menu .categorie:hover ul {
+	max-height: 50em;
+	transition: 2s;
+}
+
+
+.menu h3,
+.menu a {
+	display: block;
+	margin: 0;
+	padding: 5px 1.5px;
+	font-size: inherit;
+	color: #1759AB;
+	text-decoration: none;
+}
+
+.menu .categorie:hover h3 {
+	color: white;
+	background-color: #1759AB;
+}
+
+.menu a:hover {
+	color: black;
+	background-color: #1759AB;
+}
+
+section{
+padding-top:5px; 
+
+}
+
+	#accueil{
+	width: 100%;
+	height: 450px;
+	}
+	
+	#img{
+	width: 49%;
+	height: 100%;
+	float: left;	
+	}
+
+	#infosG{
+	width: 49%;	
+	height: 99%;
+	float: right;
+	font-size: 20px;
+	color: #1759AB;
+	text-align: center;
+	padding-top: 1%;
+	}
+
+	#soust{
+	font-size: 20px;
+	color: #1759AB;
+	text-align: center;
+	padding-top: 1%;
+	}
+	
+	#eff_ann{
+	text-align: center;
+	}
+	
+	#hist {
+	height: 600px;	
+	color: #1759AB;
+	text-align: center;
+	}
+
+	#hist1 {
+	width: 49%;
+	float: left;
+	}
+
+	#hist2 {
+	width: 49%;
+	float: right;
+	}	
+	
+	#camenbert {
+	text-align: center;
+	color: #1759AB;
+	}
+
+
+
+
+
+
+
+footer{
+margin-top: 8px;
+height: 130px;
+background-color: #1759AB;
+font-size: 20px;
+text-align: center;
+}
+
+	#adresse{
+	text-align: center;	
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

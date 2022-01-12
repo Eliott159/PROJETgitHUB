@@ -2,6 +2,8 @@
 
 import xlrd
 import matplotlib.pyplot as plt
+import webbrowser
+import os
 
 effectif=[]
 civilité=[]
@@ -15,6 +17,15 @@ adulte=0
 document = xlrd.open_workbook("exportADOC_2021-2022.xls")
 sheet=document.sheet_by_name("Détaillé")
 nbligne=sheet.nrows
+
+"""
+effectif=sheet.col_values(23)
+
+n=effectif.split("/")
+b=n[3]
+e=b.count("2022")
+print('Effectifs : ',e)
+"""
 
 
 civilité=sheet.col_values(3)
@@ -32,9 +43,33 @@ plt.pie(sizes, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.savefig('graphsexe.png')
-"""plt.show()"""
+plt.show()
+
+"""
+x1 = [ma]
+x2 = [m]
+bins = [0, 1, 2]
+plt.hist([x1, x2], bins = bins, color = ['pink', 'blue'],
+            edgecolor = 'red', hatch = '/', label = ['Madame', 'Monsieur'],
+            histtype = 'bar') # bar est le defaut
+plt.ylabel('Nombres')
+plt.title('Histogramme par sexe')
+plt.savefig('histsexe.png')
+plt.legend()
 
 
+
+x1 = [1, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5]
+x2 = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 5]
+bins = [x + 0.5 for x in range(0, 6)]
+pyplot.hist([x1, x2], bins = bins, color = ['yellow', 'green'],
+            edgecolor = 'red', hatch = '/', label = ['x1', 'x2'],
+            histtype = 'bar') # bar est le defaut
+pyplot.ylabel('valeurs')
+pyplot.xlabel('nombres')
+pyplot.title('2 series')
+pyplot.legend()
+"""
 
 
 age=sheet.col_values(5)
@@ -43,11 +78,10 @@ age.pop(0)
 """y=[]"""
 x=0
 a=len(age)
-while a>=0:
-	age.count(x)
+for i in range (a):
+	x=age[i]
 	if 0<x<7:
 		mini=mini+1
-		"""y=myCell.value """
 	elif 7<=x<11:
 		poussin=poussin+1
 	elif 11<=x<=17:
@@ -56,9 +90,7 @@ while a>=0:
 		adulte=adulte+1
 	else:
 		pass
-	n=0
-	x=x+1
-	a=a-1
+
 print('nombre mini : ',mini)
 print('nombre poussin : ',poussin)
 print('nombre juniors : ',junior)
@@ -72,7 +104,23 @@ plt.pie(sizes, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.savefig('graphage.png')
-"""plt.show()"""
+plt.show()
+
+data = [age]
+plt.hist(data, bins = [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70])
+plt.title('Histogramme du nombre de personnes par tranche d\'âge de 5 ans', fontsize=10)
+plt.xlabel('Age')
+plt.ylabel('Nombre')
+plt.savefig("hist_age1.png")
+plt.show()
+data = [age]
+plt.hist(data, bins = [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70], cumulative = -1)
+plt.title('Histogramme cumulatif par tranche d\'âge de 5 ans', fontsize=10)
+plt.savefig("hist_age2.png")
+plt.show()
+
+
+
 
 
 
@@ -94,8 +142,7 @@ plt.pie(sizes, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.savefig('graphlic.png')
-"""plt.show()"""
-
+plt.show()
 
 
 
@@ -119,6 +166,24 @@ plt.pie(sizes, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.savefig('graphville.png')
-"""plt.show()"""
+plt.show()
 
-"""webbrowser.open('file://' + os.path.realpath(tennis.html))"""
+"""
+x = [mini, poussin, junior, adulte]
+plt.hist(x, range = (0, 5), bins = 5, color = 'yellow',
+            edgecolor = 'red')
+plt.xlabel(1)
+plt.ylabel('mini')
+plt.title('Histogramme simple')
+plt.show()
+"""
+
+
+
+
+webbrowser.open(os.getcwd()+"/../html/html/tennis.html")
+
+
+
+
+
