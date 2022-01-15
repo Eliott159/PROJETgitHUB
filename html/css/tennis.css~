@@ -109,6 +109,7 @@ padding-top:5px;
 	
 	#eff_ann{
 	text-align: center;
+	color: #1759AB;
 	}
 	
 	#hist {
@@ -127,7 +128,12 @@ padding-top:5px;
 	float: right;
 	}	
 	
-	#camenbert {
+	#ville {
+	text-align: center;
+	color: #1759AB;
+	}
+	
+	#Sexe {
 	text-align: center;
 	color: #1759AB;
 	}
@@ -144,6 +150,11 @@ height: 130px;
 background-color: #1759AB;
 font-size: 20px;
 text-align: center;
+text-align: center; 
+}
+
+#foot_text{
+vertical-align:middle;
 }
 
 	#adresse{

@@ -4,7 +4,7 @@
 <title></title>
 <meta name="generator" content="Bluefish 2.2.12" >
 <meta name="author" content="Eliott" >
-<meta name="date" content="2022-01-12T11:08:08+0100" >
+<meta name="date" content="2022-01-15T14:08:59+0100" >
 <meta name="copyright" content="">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -72,10 +72,10 @@
 
 <article id="eff_ann">
 <h2>Effectif de l'année 2022: </h2>
-<h3>Par âge</h3>
 </article>
 
 <article id="hist">
+	<h3>Par âge</h3>
 	<div id="hist1">
 	<img src="../../data/hist_age2.png" width="768" height="576" alt="">
 	</div>
@@ -84,12 +84,17 @@
 	</div>
 </article>
 
-<article id="camenbert">
+<article id="ville">
 	<h3>Par ville</h3>
 	<img src="../../data/graphville.png" width="960" height="720" alt="">
 </article>
 
-
+<article id="Sexe">
+	<h3>Par Sexe</h3>
+	<img src="../../data/graphville.png" width="960" height="720" alt="">
+</article>
+	
+	
 
 
 
@@ -100,11 +105,12 @@
 </section>
 
 <footer>
-
+<div id="foot_text">
+<br>
 Contacter le club<br>
 CREPS de POITIERS<br>
 156 Route de Parthenay 86000 Poitiers<br>
-
+</div>
 
 
 </footer>

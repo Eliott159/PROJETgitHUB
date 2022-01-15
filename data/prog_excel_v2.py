@@ -1,7 +1,18 @@
 #usr!/bin/env python3
 
-import xlrd
+import xlrd 
+"""Module xlrd.
+
+Permet de:
+-importer les données du document excel
+-lire les données excel
+"""
 import matplotlib.pyplot as plt
+"""Module pyplot de la bibilothèque matplotlib
+
+Permet de:
+-creer des graphiques
+"""
 import webbrowser
 import os
 
@@ -10,6 +21,8 @@ civilité=[]
 age=[]
 licence=[]
 cp=[]
+mah=[]
+mh=[]
 mini=0
 poussin=0
 junior=0
@@ -17,15 +30,6 @@ adulte=0
 document = xlrd.open_workbook("exportADOC_2021-2022.xls")
 sheet=document.sheet_by_name("Détaillé")
 nbligne=sheet.nrows
-
-"""
-effectif=sheet.col_values(23)
-
-n=effectif.split("/")
-b=n[3]
-e=b.count("2022")
-print('Effectifs : ',e)
-"""
 
 
 civilité=sheet.col_values(3)
@@ -35,6 +39,7 @@ ma=civilité.count("Madame")
 print('nombre femmes : ',ma)
 print('nombre hommes : ',m)
 print('')
+
 
 labels = 'Hommes', 'Femmes'
 sizes = [m, ma]
@@ -46,8 +51,8 @@ plt.savefig('graphsexe.png')
 plt.show()
 
 """
-x1 = [ma]
-x2 = [m]
+x1 = [ma]*1
+x2 = [m]*1
 bins = [0, 1, 2]
 plt.hist([x1, x2], bins = bins, color = ['pink', 'blue'],
             edgecolor = 'red', hatch = '/', label = ['Madame', 'Monsieur'],
@@ -56,26 +61,29 @@ plt.ylabel('Nombres')
 plt.title('Histogramme par sexe')
 plt.savefig('histsexe.png')
 plt.legend()
-
-
-
-x1 = [1, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5]
-x2 = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 5]
-bins = [x + 0.5 for x in range(0, 6)]
-pyplot.hist([x1, x2], bins = bins, color = ['yellow', 'green'],
-            edgecolor = 'red', hatch = '/', label = ['x1', 'x2'],
-            histtype = 'bar') # bar est le defaut
-pyplot.ylabel('valeurs')
-pyplot.xlabel('nombres')
-pyplot.title('2 series')
-pyplot.legend()
 """
+
+
+for loop in range (ma):
+	mah.append(1)
+	"""loop permettant de creer une liste mah utilisable par le module PYPLOT afin de creer un histogramme."""
+for loop in range (m):
+	mh.append(2)
+	"""loop permettant de creer une liste mh utilisable par le module PYPLOT afin de creer un histogramme."""
+plt.hist([mah, mh], bins = [1,2], color = ['pink', 'blue'],
+            label = ['Madame', 'Monsieur'], histtype = 'bar') # Création du graphique: avec les valeurs des mah et mh, qui va de 1 à 2 en ordonnées, de coleur rose pour mah et bleu pour mh, avec une 									  légende (Madame=rose et Monsieur=bleu), sélection du type d'gistogramme classic (bar)
+plt.ylabel('Nombre')
+plt.xlabel('Valeurs à ignorer')
+plt.title('Histogramme des effectifs par sexe')
+plt.savefig('histsexe')
+plt.legend()
+plt.show()
+
 
 
 age=sheet.col_values(5)
 age.pop(0)
 age.pop(0)
-"""y=[]"""
 x=0
 a=len(age)
 for i in range (a):
@@ -105,6 +113,7 @@ plt.pie(sizes, labels=labels, colors=colors,
 plt.axis('equal')
 plt.savefig('graphage.png')
 plt.show()
+
 
 data = [age]
 plt.hist(data, bins = [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70])
@@ -168,21 +177,9 @@ plt.axis('equal')
 plt.savefig('graphville.png')
 plt.show()
 
-"""
-x = [mini, poussin, junior, adulte]
-plt.hist(x, range = (0, 5), bins = 5, color = 'yellow',
-            edgecolor = 'red')
-plt.xlabel(1)
-plt.ylabel('mini')
-plt.title('Histogramme simple')
-plt.show()
-"""
-
-
 
 
 webbrowser.open(os.getcwd()+"/../html/html/tennis.html")
-
 
 
 
