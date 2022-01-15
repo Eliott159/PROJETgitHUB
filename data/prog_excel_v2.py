@@ -15,6 +15,13 @@ Permet de:
 """
 import webbrowser
 import os
+"""Module webbrowser et os
+
+os:
+Fournit une façon portable d'utiliser les fonctionnalités dépendantes du système d'exploitation.
+webbrowser:
+Fournit une interface de haut niveau pour permettre l'affichage de documents Web aux utilisateurs.
+"""
 
 effectif=[]
 civilité=[]

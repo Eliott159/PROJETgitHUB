@@ -4,7 +4,7 @@
 <title></title>
 <meta name="generator" content="Bluefish 2.2.12" >
 <meta name="author" content="Eliott" >
-<meta name="date" content="2022-01-15T14:08:59+0100" >
+<meta name="date" content="2022-01-15T15:43:01+0100" >
 <meta name="copyright" content="">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -44,12 +44,6 @@
 		</section>
 		<section class="categorie">
 			<a href="#"><h3>Contacter le Club</h3></a>
-			<ul>
-				<li><a href="#">Adresse</a></li>
-				<li><a href="#">Mail</a></li>
-				<li><a href="#">Telephone</a></li>
-				<li><a href="#">Réseaux Sociaux</a></li>
-			</ul>
 		</section>
 
 </nav>
@@ -91,7 +85,7 @@
 
 <article id="Sexe">
 	<h3>Par Sexe</h3>
-	<img src="../../data/graphville.png" width="960" height="720" alt="">
+	<img src="../../data/histsexe.png" width="960" height="720" alt="">
 </article>
 	
 	
