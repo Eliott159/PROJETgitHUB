@@ -1,1 +1,0 @@
-Tennis-Club Val de Boivre
