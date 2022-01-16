@@ -4,7 +4,7 @@
 <title></title>
 <meta name="generator" content="Bluefish 2.2.12" >
 <meta name="author" content="Eliott" >
-<meta name="date" content="2022-01-15T15:43:01+0100" >
+<meta name="date" content="2022-01-15T18:45:05+0100" >
 <meta name="copyright" content="">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -43,7 +43,7 @@
 			<a href="#adulte"><h3>Adulte</h3></a>
 		</section>
 		<section class="categorie">
-			<a href="#"><h3>Contacter le Club</h3></a>
+			<a href="#foot_text"><h3>Contacter le Club</h3></a>
 		</section>
 
 </nav>
@@ -58,15 +58,14 @@
 		<div id="soust">
 			<h3>Infos Générales sur le club</h3>	
 		</div>
-
-				<img src="../../data/hist_age1.png" width="480" height="360" alt="">
+			<img src="../../data/hist_age1.png" width="480" height="360" alt="">
 			<img src="../../data/graphage.png" width="400" height="300" alt="">
 	</div>
 </article>
 
-<article id="eff_ann">
+<div id="eff_ann">
 <h2>Effectif de l'année 2022: </h2>
-</article>
+</div>
 
 <article id="hist">
 	<h3>Par âge</h3>

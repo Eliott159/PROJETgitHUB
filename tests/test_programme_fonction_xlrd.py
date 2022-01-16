@@ -1,9 +1,22 @@
-import xlrd 
+import xlrd
 
-document = xlrd.open_workbook("exportADOC_2021-2022.xls") #lit le fichier exportADOC_2021-2022.xls et renvoie un objet de type xlrd.Book
+"""
+.. module:: xlrd
+   :platform: Unix, windows, java, macOS
+   :synopsis: Module excel permet d'extraire des données excel et de les traités
 
-sheet=document.sheet_by_name("Détaillé") #renvoie la feuille de nom indiqué
+.. moduleauthor:: Marceau Eliott <eliott.marceau@univ-poitiers.fr>
 
-nbligne=sheet.nrows #le nombre de lignes du fichier
+"""
 
-civilité=sheet.col_values(0) #Renvoie une tranche des valeurs des cellules de la colonne donnée
+#lit le fichier exportADOC_2021-2022.xls et renvoie un objet de type xlrd.Book
+document = xlrd.open_workbook("exportADOC_2021-2022.xls") 
+
+#renvoie la feuille de nom indiqué
+sheet=document.sheet_by_name("Détaillé") 
+
+#renvoie nombre de lignes du fichier
+nbligne=sheet.nrows 
+
+#renvoie une tranche des valeurs des cellules de la colonne donnée
+civilité=sheet.col_values(0)
