@@ -55,7 +55,7 @@ mini=0
 poussin=0
 junior=0
 adulte=0
-document = xlrd.open_workbook("exportADOC_2021-2022.xls")
+document = xlrd.open_workbook("../data/exportADOC_2021-2022.xls")
 sheet=document.sheet_by_name("Détaillé")
 nbligne=sheet.nrows
 
@@ -98,7 +98,7 @@ Returns
 Graphique camembert sexe
 """
 plt.axis('equal')
-plt.savefig('graphsexe.png')
+plt.savefig('../data/graphsexe.png')
 plt.show()
 
 
@@ -132,7 +132,7 @@ Voir test unitaire
 plt.ylabel('Nombre')
 plt.xlabel('Valeurs à ignorer')
 plt.title('Histogramme des effectifs par sexe')
-plt.savefig('histsexe')
+plt.savefig('../data/histsexe')
 plt.legend()
 plt.show()
 
@@ -171,7 +171,7 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graphage.png')
+plt.savefig('../data/graphage.png')
 plt.show()
 
 
@@ -180,9 +180,9 @@ plt.hist(data, bins = [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70])
 plt.title('Histogramme du nombre de personnes par tranche d\'âge de 5 ans', fontsize=10)
 plt.xlabel('Age')
 plt.ylabel('Nombre')
-plt.savefig("hist_age1.png")
+plt.savefig("../data/hist_age1.png")
 plt.show()
-"""Fonction qui creer un graphique histogramme à partir de données.
+"""Fonction qui creer un graphique histogramme (du nombre de personnes par tranche d'âge) à partir de données.
 
 Parameters
 ----------
@@ -203,9 +203,26 @@ Voir test unitaire
 data = [age]
 plt.hist(data, bins = [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70], cumulative = -1)
 plt.title('Histogramme cumulatif par tranche d\'âge de 5 ans', fontsize=10)
-plt.savefig("hist_age2.png")
+plt.savefig("../data/hist_age2.png")
 plt.show()
+"""Fonction qui creer un graphique histogramme (cumulatif par tranche d'âge) à partir de données.
 
+Parameters
+----------
+data : liste [age]
+   taille des différentes colonnes et leurs positions (exemple: [1, 1, 1] = colonne d'ordonnées 3 et d'abcisses 1)
+bins : liste [0,5,10,15,20,25,30,35,40,45,50,55,60,65,70]
+   différentes parties de l'histogramme (exemple: de 0 à 5, de 5 à 10, ..., il y une colonne)
+pre: age de type liste
+     [age] >= 0
+
+Returns
+-------
+Graphique histogramme
+Exemple
+-------
+Voir test unitaire
+"""
 
 
 
@@ -228,7 +245,7 @@ colors = ['yellowgreen', 'gold', 'lightskyblue']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graphlic.png')
+plt.savefig('../data/graphlic.png')
 plt.show()
 
 
@@ -252,7 +269,7 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'red']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
-plt.savefig('graphville.png')
+plt.savefig('../data/graphville.png')
 plt.show()
 
 

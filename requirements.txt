@@ -1,0 +1,11 @@
+python = version '3.8.10'
+
+os = Ce module fournit une façon portable d'utiliser les fonctionnalités dépendantes du système d'exploitation. Par exemple, la fonction os. ... stat(path) renvoie des informations sur les statistiques de path dans le même format (qui est originaire de l'interface POSIX).
+
+webbrowser = Le module Webbrowser fournit une interface de haut niveau pour permettre l'affichage des documents Web aux utilisateurs.
+
+matplotlib = Une bibliothèque du langage de programmation Python destinée à tracer et visualiser des données sous formes de graphiques
+
+pyplot = Pyplot est un module Matplotlib proposant plusieurs fonctions simples pour ajouter des éléments tels que des lignes, des images ou des textes aux axes d'un graphique.
+
+xlrd = Bibliothèque permettant aux développeurs d'extraire des données à partir de fichiers de tableur Microsoft Excel (tm) .xls

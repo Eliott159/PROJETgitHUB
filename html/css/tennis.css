@@ -112,8 +112,28 @@ padding-top:5px;
 	color: #1759AB;
 	}
 	
+	#categorie {
+	text-align: center;
+	color: #1759AB;
+	}
+	
+	#ville {
+	text-align: center;
+	color: #1759AB;
+	}
+	
+	#Sexe {
+	text-align: center;
+	color: #1759AB;
+	}
+	
+	#classement {
+	text-align: center;
+	color: #1759AB;
+	}
+	
 	#hist {
-	height: 600px;	
+	height: 617px;	
 	color: #1759AB;
 	text-align: center;
 	}
@@ -126,18 +146,7 @@ padding-top:5px;
 	#hist2 {
 	width: 49%;
 	float: right;
-	}	
-	
-	#ville {
-	text-align: center;
-	color: #1759AB;
 	}
-	
-	#Sexe {
-	text-align: center;
-	color: #1759AB;
-	}
-
 
 
 
