@@ -1,3 +1,23 @@
+*********************
+Manuel d'utilisation
+*********************
+
+Utilisation
+============
+Afin de pouvoir utiliser le contenus de ce projet veuillez passez par différentes étapes:
+ * Téléchargement des différents modules
+ * Mise à jour du language python
+ * Utilisation de la commande "./Excel_club_de_tennis.py --input-file exportADOC_2021-2022.xls --output-dir ./../html/" dans le dossier PROJETgitHUB/Excel_club_de_tennis/
+ 
+Les différents modules
+=======================
+Télécharger les modules suivants:
+- xlrd
+- matplotlib.pyplot
+- webbrowser
+- os
+
+
 **********
 Objectifs
 **********

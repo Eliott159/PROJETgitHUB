@@ -1,13 +1,11 @@
-  .. code-block:: bash
-
-       Documentation du code
-       *********************
-  
-       .. automodule:: Excel_club_de_tennis
+Documentation du code
+*********************
+ 
+.. automodule:: xlrd
 
 
-       Module1
-       ========================
+Module1
+========================
 
-       .. automodule:: Excel_club_de_tennis.Mathplotlib
-       :members: Mazzolini Tim Marceau Eliott
+.. automodule:: xlrd.module1
+:members:
