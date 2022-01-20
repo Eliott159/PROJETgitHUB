@@ -198,9 +198,12 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
+plt.title('Camembert des effectifs par catégories', fontsize=10)
 plt.savefig('../data/graphage.png')
+plt.legend()
 plt.show()
-
+efficace=mini+poussin+junior+adulte
+"""La variable efficace permet d'afficher le nombre d'effectif dans l'html"""
 
 
 
@@ -349,37 +352,11 @@ for loop in range (c0):
 	ch0.append(18)
 data = [nch, ch40, ch305, ch304, ch303, ch302, ch301, ch30, ch155, ch154, ch153, ch152, ch151, ch15, ch56, ch46, ch36, ch26, ch16, ch0]
 plt.hist(data, bins = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18])
-plt.title('Histogramme du classement des memebres du club', fontsize=10)
+plt.title('Histogramme du classement des membres du club', fontsize=10)
 plt.xlabel('NC-40-30/5-30/4-30/3-30/2-30/1-30-15/5-15/4-15/3-15/2-15/1-15-6/5-4/6-3/6-2/6-1/6-0')
 plt.ylabel('Nombre')
 plt.savefig("../data/classement.png")
 plt.show()
-
-
-
-
-
-
-licence=sheet.col_values(50)
-
-c=licence.count('Compétition')
-l=licence.count("Loisir")
-nonr=licence.count('N')
-print('nombre de licence compétition : ',c)
-print('nombre de licence loisir : ',l)
-print('non renseigé : ',nonr)
-print('')
-
-labels = 'Compétition', 'Loisir', 'Non renseigné'
-sizes = [c, l, nonr]
-colors = ['yellowgreen', 'gold', 'lightskyblue']
-plt.pie(sizes, labels=labels, colors=colors, 
-        autopct='%1.1f%%', shadow=True, startangle=90)
-plt.axis('equal')
-plt.savefig('../data/graphlic.png')
-plt.show()
-
-
 
 
 
@@ -403,12 +380,14 @@ colors = ['yellowgreen', 'gold', 'lightskyblue', 'lightcoral', 'red']
 plt.pie(sizes, labels=labels, colors=colors, 
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
+plt.title('Camembert de la répartition par commune', fontsize=10)
 plt.savefig('../data/graphville.png')
+plt.legend()
 plt.show()
 
 
 
-webbrowser.open(os.getcwd()+"/../html/html/tennis.html")
+webbrowser.open(os.getcwd()+"/../html/html/tennis2.html")
 """Fonction qui ouvre un site web.
 
 Parameters
@@ -425,6 +404,176 @@ Exemple
 -------
 Voir test unitaire
 """
+
+#######################################
+#                                     #
+#             Programme HTML          #
+#                                     #
+#######################################
+
+def write_html_head(fichier, titre):
+
+    fichier.write(
+"""
+<head>
+<title></title>
+<meta name="generator" content="Bluefish 2.2.12" >
+<meta name="author" content="Eliott" >
+<meta name="date" content="2022-01-17T22:58:55+0100" >
+<meta name="copyright" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+<link href="../css/tennis.css" rel="stylesheet" type="text/css">
+</head>""")
+   
+def write_html_body(fichier):
+    fichier.write(
+"""<body>""")
+
+def write_html_header(fichier):
+    fichier.write(
+
+"""<header>
+<div id="logo">
+<img src="../Images/logo.png" width="125" height="82" alt="">
+</div>
+
+ <div id="titre">
+	<h1>Tennis-Club Val de Boivre </h1>
+</div>
+</header>
+
+
+
+<nav> 
+<div class="menu">
+		<section class="categorie">
+			<a href="#categorie"><h3>Catégorie</h3></a>
+		</section>
+		<section class="categorie">
+			<a href="#ville"><h3>Ville</h3></a>
+		</section>
+		<section class="categorie">
+			<a href="#Sexe"><h3>Sexe</h3></a>
+		</section>
+		<section class="categorie">
+			<a href="#classement"><h3>Classement</h3></a>
+		</section>
+		<section class="categorie">
+			<a href="#hist"><h3>Age</h3></a>
+		</section>
+
+</nav>
+<section>
+<article id="accueil">
+	<div id="img">
+		<img src="../Images/tenniscour.jpg" width="100%" height="100%" alt="">
+	</div>
+
+	<div id="infosG">
+		<div id="soust">
+			<h2>Infos Générales sur le club</h2>	
+		</div>
+			<p>
+    <b>BIENVENUE au TCVdB</p></b><hr style="width: 400px">
+    Le club propose la pratique encadrée à partir de 5 ans, en loisirs et/ou compétition, dispensée par un entraîneur diplômé d’Etat et un entraîneur qualifié.
+    Il dispose pour cela de nombreuses infrastructures, 20 terrains dont 10 couverts répartis à Biard centre, Vouneuil-sous-Biard centre, au Creps de Boivre ainsi qu’à Poitiers Saint-Nicolas.
+    L’équipe dirigeante a étoffé les outils pédagogiques du club en investissant dans un lanceur de balles en Avril 2021.
+    Venez nous rejoindre, que vous soyez débutant ou confirmé, jeune ou moins jeune, nous vous accueillerons les bras ouverts, raquette à la main ! </p>
+	</div>
+</article>
+
+<article id="eff_ann">
+<h1>Effectif de l'année 2022: """)
+def write_html_eff(fichier, efficace):
+    fichier.write("\t<td>"+str(efficace)+"</td>")
+def write_html_header2(fichier):
+    fichier.write(
+"""</h1>
+</article>
+
+<article id="categorie">
+	<h2>Par catégorie</h2>
+	<img src="../../data/graphage.png" width="960" height="720" alt="">
+</article>
+
+<article id="ville">
+	<h2>Par commune</h2>
+	<img src="../../data/graphville.png" width="960" height="720" alt="">
+</article>
+
+<article id="Sexe">
+	<h2>Par Sexe/Catégorie</h2>
+	<img src="../../data/histsexe.png" width="960" height="720" alt="">
+	<img src="../../data/graphsexe.png" width="960" height="720" alt="">
+</article>
+
+<article id="classement">
+	<h2>Par Classement</h2>
+	<img src="../../data/classement.png" width="960" height="720" alt="">
+</article>
+
+<article id="hist">
+	<h2>Par âge</h2>
+	<div id="hist1">
+	<img src="../../data/hist_age2.png" width="768" height="576" alt="">
+	</div>
+	<div id="hist2">
+	<img src="../../data/hist_age1.png" width="768" height="576" alt="">
+	</div>
+</article>
+
+
+
+
+</section>""")
+
+def write_html_footer(fichier):
+    fichier.write(
+
+"""<footer>
+<div id="foot_text">
+<br>
+Contacter le club<br>
+CREPS de POITIERS<br>
+156 Route de Parthenay 86000 Poitiers<br>
+</div>
+
+
+</footer>
+
+
+</body>""")
+
+
+    
+    
+def write_html_end(fichier):
+    fichier.write("</html>")
+    
+fichier = open("../html/html/tennis2.html", "w")
+write_html_head(fichier,"mon fichier")
+write_html_body(fichier)
+write_html_header(fichier)
+write_html_eff(fichier, efficace)
+write_html_header2(fichier)
+write_html_footer(fichier)
+
+
+
+fichier.close()
+
+
+
+
+
+
+
 
 
 
