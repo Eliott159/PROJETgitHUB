@@ -156,8 +156,8 @@ Voir test unitaire
 plt.ylabel('Nombre')
 plt.xlabel('Valeurs à ignorer')
 plt.title('Histogramme des effectifs par sexe')
-plt.savefig('../data/histsexe')
 plt.legend()
+plt.savefig('../data/histsexe')
 plt.show()
 
 
@@ -182,9 +182,6 @@ for i in range (a):
 		adulte=adulte+1
 	else:
 		pass
-"""Programme qui permet de creer les catégories
-A faire !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-"""
 
 print('nombre mini : ',mini)
 print('nombre poussin : ',poussin)
@@ -199,12 +196,11 @@ plt.pie(sizes, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.title('Camembert des effectifs par catégories', fontsize=10)
-plt.savefig('../data/graphage.png')
 plt.legend()
+plt.savefig('../data/graphage.png')
 plt.show()
 efficace=mini+poussin+junior+adulte
 """La variable efficace permet d'afficher le nombre d'effectif dans l'html"""
-
 
 
 
@@ -351,7 +347,7 @@ for loop in range (c16):
 for loop in range (c0):
 	ch0.append(18)
 data = [nch, ch40, ch305, ch304, ch303, ch302, ch301, ch30, ch155, ch154, ch153, ch152, ch151, ch15, ch56, ch46, ch36, ch26, ch16, ch0]
-plt.hist(data, bins = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18])
+plt.hist(data, bins = range(15))
 plt.title('Histogramme du classement des membres du club', fontsize=10)
 plt.xlabel('NC-40-30/5-30/4-30/3-30/2-30/1-30-15/5-15/4-15/3-15/2-15/1-15-6/5-4/6-3/6-2/6-1/6-0')
 plt.ylabel('Nombre')
@@ -381,8 +377,8 @@ plt.pie(sizes, labels=labels, colors=colors,
         autopct='%1.1f%%', shadow=True, startangle=90)
 plt.axis('equal')
 plt.title('Camembert de la répartition par commune', fontsize=10)
-plt.savefig('../data/graphville.png')
 plt.legend()
+plt.savefig('../data/graphville.png')
 plt.show()
 
 
